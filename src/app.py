@@ -34,16 +34,15 @@ if uploaded_file is not None:
     if st.checkbox("show preview"):
         st.write(rows[:5])
 
-  
-    
+    if st.button("Generate report"):
+            report = profile_rows(rows)
+            st.session_state["report"] = report
+        
 
     if "report" in st.session_state:
-
         report=st.session_state["report"]
 
-        if st.button("Generate report"):
-            report=profile_rows(rows)
-            st.session_state["report"]=report
+
 
 
 
@@ -59,7 +58,9 @@ if uploaded_file is not None:
 
         st.markdown(render_markdown(report))
         
-        json_text=json.dumps(report)
-        md_text=render_markdown(report)
-        st.download_button("get json", data=json_text,file_name='report.json')
-        st.download_button("get markdown", data=md_text,file_name='report.md')
+        json_text=json.dumps(report, indent=2, ensure_ascii=False)
+        md_text = render_markdown(report)
+
+        st.download_button("Download JSON", data=json_text, file_name='report.json', mime="application/json")
+
+        st.download_button("Download Markdown", data=md_text, file_name='report.md', mime="text/markdown")

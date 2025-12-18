@@ -25,7 +25,7 @@ def profile(
     md=render_markdown(profile)
     out_dir.mkdir(parents=True,exist_ok=True)
     json_path=out_dir/f"{report_name}.json"
-    json_path.write_text(json.dumps(profile))
+    json_path.write_text(json.dumps(profile, indent=2, ensure_ascii=False), encoding="utf-8")
     md_path=out_dir/f"{report_name}.md"
     md_path.write_text(md)
 

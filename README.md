@@ -8,7 +8,7 @@
     - `outputs/report.json`and `outputs/report.md` exist
 4. GUI:
     - (If you have a `src/` folder: set `PYTHONPATH=src` first)
-    - `uv run streamlit run app.py`
+    - `uv run streamlit run src/app.py`
 5. Export:
     - download JSON + Markdown from the UI
 

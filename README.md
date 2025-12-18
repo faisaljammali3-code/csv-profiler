@@ -3,11 +3,11 @@
     - `uv pip install -r requirements.txt`
 2. CLI:
     - (If you havea`src`folder:set`PYTHONPATH=src` first)
-    - `uv run python -m csv_profiler.cli profile data sample.csv --out-dir outputs`
+    - `uv run python -m csv_profiler.cli profile data/sample.csv --out-dir outputs`
 3. Verify:
     - `outputs/report.json`and `outputs/report.md` exist
 4. GUI:
-    - (If you have a `src/` folder: set `PYTHONPATH=src` first)
+    - (If you have a `src/` folder: set  `PYTHONPATH=src`  first)
     - `uv run streamlit run src/app.py`
 5. Export:
     - download JSON + Markdown from the UI
@@ -30,6 +30,5 @@
 You should see `report.json` and `report.md`.
 
 ## Image
-<img width="1916" height="854" alt="image" src="https://github.com/user-attachments/assets/870dbb38-38da-45ab-9cf3-0ed60dbb470c" />
-<img width="905" height="872" alt="image" src="https://github.com/user-attachments/assets/b76cb470-3f02-4609-ae79-e42ebb381022" />
+<img width="819" height="801" alt="image" src="https://github.com/user-attachments/assets/2d8dec25-4502-4374-b181-5d12c9e87f76" />
 

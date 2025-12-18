@@ -28,3 +28,8 @@
     dir outputs
     
 You should see `report.json` and `report.md`.
+
+## Image
+<img width="1916" height="854" alt="image" src="https://github.com/user-attachments/assets/870dbb38-38da-45ab-9cf3-0ed60dbb470c" />
+<img width="905" height="872" alt="image" src="https://github.com/user-attachments/assets/b76cb470-3f02-4609-ae79-e42ebb381022" />
+

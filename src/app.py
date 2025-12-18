@@ -35,13 +35,16 @@ if uploaded_file is not None:
         st.write(rows[:5])
 
   
-    if st.button("Generate report"):
-        report=profile_rows(rows)
-        st.session_state["report"]=report
-
+    
 
     if "report" in st.session_state:
+
         report=st.session_state["report"]
+
+        if st.button("Generate report"):
+            report=profile_rows(rows)
+            st.session_state["report"]=report
+
 
 
 
